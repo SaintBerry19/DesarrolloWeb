@@ -1,0 +1,134 @@
+body {
+    font-family: sans-serif;
+    padding-top: 55px;
+  }
+  
+  h1 {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    box-shadow: 5px 5px 11px 5PX;
+  }
+  
+  h2 {
+    font-size: 40px;
+    font-style: italic;
+    text-decoration: none;
+  }
+  
+  h1, h2, p {
+    text-align: center;
+  }
+  
+  .menu {
+    background-color: #FFC107;
+    padding: 20px;
+  }
+  
+  /* img {
+    display: block;
+    margin-left: auto;
+    margin-right: 874px;
+    margin-top: 0px;
+  } */
+  
+  hr {
+    height: 4px;
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(6, 5, 5);
+  }
+  
+  .bottom-line {
+    margin-top: 25px;
+    color: black;
+  }
+  
+  h1, h2 {
+    font-family: Impact, serif;
+  }
+  
+  footer {
+    font-size: 14px;
+  }
+    
+  .navbar{
+    background-color: rgb(234, 163, 20);
+}
+
+  .list-group {
+  display : grid;
+  grid-template-rows: 800px 100px 100px 100px 100px 100px;
+  grid-template-columns: 50% 47%;
+  grid-column-gap: 50px ;
+  grid-row-gap: 10px ; 
+}
+
+  .list-group-item{
+    background-color: #FFC107 ; 
+    
+  }
+
+  .imagen{
+    transform: translate(25px , 50px);
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    border: #000000 solid 1px;
+    width: 75%;
+  }
+
+  .imagen:hover{
+  transform: scale(0.8);
+  }
+
+  .nav-link:hover{
+    color: #ee2f09;
+    outline-style: groove;
+  }
+
+  .navbar-brand:hover{
+    color: #ee2f09;
+  }
+
+  .badge{
+    color:#e70707
+  }
+
+@media screen and (max-width: 768px) {
+  .list-group {
+    display : flex;
+    flex-direction: space-between;
+  }
+
+  body {
+    font-family: sans-serif;
+    margin: 0px;
+  }
+
+  .menu {
+    background-color: #FFC107;
+  }
+
+  .imagen{
+    transform: none;
+    border: none;
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;  
+    padding: 15px;
+    object-fit: scale-down;
+  }
+  
+  .nav-link:hover{
+    color: #0911ee;
+    outline-style: groove;
+  }
+  
+  .navbar-brand:hover{
+    color: #0911ee;
+  }
+
+  .imagen:hover{
+    transform: none;
+    }
+  
+}
