@@ -1,0 +1,136 @@
+@import "variables";
+
+body {
+    font-family: sans-serif;
+    padding-top: 55px;
+}
+
+@mixin font ($size, $style) {
+    font-size: $size;
+    font-style: $style;
+}
+
+h1 {
+    @include font(40px, italic);
+    margin-top: 0;
+    margin-bottom: 15px;
+    box-shadow: 5px 5px 11px 5PX;
+
+    h2 {
+        font-family: Impact, serif;
+    }
+}
+
+h2 {
+    @include font(40px, italic);
+    text-decoration: none;
+}
+
+h1,
+h2,
+p {
+    text-align: center;
+}
+
+.menu {
+    background-color: $color-primario;
+    padding: $spacing*5;
+}
+
+hr {
+    height: $spacing;
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(6, 5, 5);
+}
+
+.bottom-line {
+    margin-top: $spacing*6;
+    color: black;
+}
+
+footer {
+    font-size: $spacing*4;
+}
+
+.navbar {
+    background-color: $color-navbar;
+
+}
+
+.list-group {
+    display: grid;
+    grid-template-rows: 800px 100px 100px 100px 100px 100px;
+    grid-template-columns: 50% 47%;
+    grid-column-gap: 50px;
+    grid-row-gap: 10px;
+}
+
+.list-group-item {
+    background-color: $color-primario;
+
+}
+
+.imagen {
+    transform: translate(25px, 50px);
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    border: #000000 solid 1px;
+    width: 75%;
+}
+
+.imagen:hover {
+    transform: scale(0.8);
+}
+
+.nav-link:hover {
+    color: $color-hover;
+    outline-style: groove;
+}
+
+.navbar-brand:hover {
+    color: $color-hover;
+}
+
+.badge {
+    @extend .navbar-brand:hover
+}
+
+@media screen and (max-width: 768px) {
+    .list-group {
+        display: flex;
+        flex-direction: space-between;
+    }
+
+    body {
+        font-family: sans-serif;
+        margin: 0px;
+    }
+
+    .menu {
+        background-color: #FFC107;
+    }
+
+    .imagen {
+        transform: none;
+        border: none;
+        max-width: 100%;
+        max-height: 100%;
+        text-align: center;
+        padding: 15px;
+        object-fit: scale-down;
+    }
+
+    .nav-link:hover {
+        color: #0911ee;
+        outline-style: groove;
+    }
+
+    .navbar-brand:hover {
+        color: #0911ee;
+    }
+
+    .imagen:hover {
+        transform: none;
+    }
+
+}
