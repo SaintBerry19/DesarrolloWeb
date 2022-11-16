@@ -59,15 +59,15 @@ footer {
 
 .list-group {
     display: grid;
-    grid-template-rows: 800px 100px 100px 100px 100px 100px;
-    grid-template-columns: 50% 47%;
-    grid-column-gap: 50px;
+    grid-template-rows: 800px 800px ;
+    grid-template-columns: 1fr 1fr ;
+    grid-column-gap: 6px;
     grid-row-gap: 10px;
-}
 
-.list-group-item {
-    background-color: $color-primario;
 
+    &-item {
+        background-color: $color-primario;
+    }
 }
 
 .imagen {
@@ -76,10 +76,11 @@ footer {
     transition-timing-function: ease-in-out;
     border: #000000 solid 1px;
     width: 75%;
-}
 
-.imagen:hover {
-    transform: scale(0.8);
+
+    &:hover {
+        transform: scale(0.8);
+    }
 }
 
 .nav-link:hover {
@@ -92,7 +93,53 @@ footer {
 }
 
 .badge {
-    @extend .navbar-brand:hover
+    @extend .navbar-brand:hover;
+}
+
+
+@media screen and (max-width: 1108px) {
+    .list-group {
+        display: flex;
+        flex-direction: space-between;
+    }
+
+    body {
+        font-family: sans-serif;
+        margin: 0px;
+    }
+
+    .menu {
+        background-color: #116bd8;
+    }
+
+    .imagen {
+        transform: none;
+        border: none;
+        max-width: 100%;
+        max-height: 100%;
+        text-align: center;
+        padding: 15px;
+        object-fit: scale-down;
+    }
+
+    .nav-link:hover {
+        color: #024429;
+        outline-style: groove;
+    }
+
+    .navbar-brand:hover {
+        color: #024429;
+    }
+
+    .imagen:hover {
+        transform: none;
+    }
+
+    .relleno{
+        background-color: $color-primario;
+        padding-bottom: 100%;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -107,30 +154,38 @@ footer {
     }
 
     .menu {
-        background-color: #FFC107;
+        background-color: #116bd8;
     }
 
     .imagen {
         transform: none;
         border: none;
-        max-width: 100%;
+        max-width: 50%;
         max-height: 100%;
         text-align: center;
-        padding: 15px;
+        padding-left: 1px;
         object-fit: scale-down;
     }
 
     .nav-link:hover {
-        color: #0911ee;
+        color: #024429;
         outline-style: groove;
     }
 
     .navbar-brand:hover {
-        color: #0911ee;
+        color: #024429;
     }
 
     .imagen:hover {
         transform: none;
     }
 
+    .span{
+        align-items: flex-start; 
+    }
+
+    .relleno{
+        background-color: $color-primario;
+        padding-bottom: 100%;
+    }
 }
